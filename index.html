@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse custom jersey, polo, varsity jacket and apparel mockups from R87 Apparel.">
+  <title>R87 Apparel | Custom Mockup Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="R87 Apparel home"><span class="brand-mark">R</span><span>R87 <b>APPAREL</b></span></a>
+      <nav class="main-nav" id="mainNav">
+        <a class="nav-link active" href="#gallery">Mockups</a>
+        <a class="nav-link" href="#categories">Categories</a>
+        <a class="nav-link" href="#how-it-works">How to Order</a>
+        <a class="nav-link" href="#about">About</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="searchToggle" aria-label="Show search">⌕</button>
+        <a class="inquiry-link" href="#contact">Inquire <span>↗</span></a>
+        <button class="menu-btn" id="menuToggle" aria-label="Open menu">☰</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="green-dot"></span> CUSTOM APPAREL COLLECTION</p>
+          <h1>Wear your<br><span>own identity.</span></h1>
+          <p class="hero-desc">Your team. Your style. Your design. Explore our apparel mockups and choose the look you want us to create.</p>
+          <a class="primary-btn" href="#gallery">Explore Mockups <span>→</span></a>
+          <div class="hero-pagination"><span class="active"></span><i></i><i></i><small>01 — 03</small></div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-glow"></div>
+          <img src="images/featured-jersey.jpg" alt="Featured white football jersey mockup">
+          <div class="hero-product-note"><small>FEATURED MOCKUP</small><strong>Classic White Kit</strong><span>Customizable design</span><b>INQUIRE FOR PRICE</b></div>
+        </div>
+        <div class="hero-side-label">R87 / CUSTOM TEAMWEAR</div>
+      </section>
+
+      <section class="category-strip" id="categories">
+        <div><p class="eyebrow">FIND YOUR STYLE</p><h2>Browse categories</h2></div>
+        <div class="category-chips" id="categoryChips">
+          <button class="chip active" data-category="All">All</button>
+          <button class="chip" data-category="Jersey">Jersey</button>
+          <button class="chip" data-category="Polo">Polo</button>
+          <button class="chip" data-category="Varsity Jacket">Varsity Jacket</button>
+          <button class="chip" data-category="Long Sleeve">Long Sleeve</button>
+          <button class="chip" data-category="T-Shirt">T-Shirt</button>
+        </div>
+      </section>
+
+      <section class="gallery-section" id="gallery">
+        <div class="section-heading">
+          <div><p class="eyebrow">THE MOCKUP COLLECTION</p><h2>Find your next look<span>.</span></h2></div>
+          <div class="gallery-tools">
+            <label class="search-box" id="searchBox"><span>⌕</span><input id="searchInput" type="search" placeholder="Search designs..."></label>
+            <select id="sortSelect" aria-label="Sort designs"><option value="featured">Featured</option><option value="az">Name: A–Z</option></select>
+          </div>
+        </div>
+        <div class="active-filter-row"><span id="resultCount">Showing all mockups</span><span class="filter-label">FILTER <b>≡</b></span></div>
+        <div class="product-grid" id="productGrid"></div>
+        <div class="empty-state" id="emptyState" hidden>No mockups found. Try another keyword or category.</div>
+      </section>
+
+      <section class="order-banner" id="how-it-works">
+        <div><p class="eyebrow">MADE FOR YOUR TEAM</p><h2>See a design you like?</h2><p>Choose a mockup, tell us your preferred colors and details, then send us an inquiry.</p></div>
+        <a class="primary-btn" href="#contact">Start Your Order <span>↗</span></a>
+      </section>
+      <section class="bottom-info" id="about">
+        <div><p class="eyebrow">R87 APPAREL</p><h3>Made to represent.</h3><p>Browse our design inspirations for jerseys, polos, varsity jackets and more. Every mockup can be customized to match your team or organization.</p></div>
+        <div class="info-links" id="contact"><span>HAVE A PROJECT?</span><a href="https://www.facebook.com/share/1E1KVutcP6/?mibextid=wwXIfr" target="_blank" rel="noopener">Message us on Facebook ↗</a><small>Replace this link with your Facebook page URL.</small></div>
+      </section>
+    </main>
+    <footer><span>© 2026 R87 APPAREL</span><span>YOUR STYLE. YOUR TEAM. YOUR DESIGN.</span></footer>
+  </div>
+
+  <div class="modal" id="productModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close preview">×</button>
+      <div class="modal-image-wrap"><img id="modalImage" src="" alt="Selected apparel mockup"></div>
+      <div class="modal-details"><p class="eyebrow" id="modalCategory">APPAREL MOCKUP</p><h2 id="modalTitle">Design name</h2><p id="modalDescription">Customize this design with your preferred colors and details.</p><div class="modal-tags"><span>Custom colors</span><span>Custom name & number</span><span>Made to order</span></div><a class="primary-btn" id="modalInquiry" href="https://www.facebook.com/" target="_blank" rel="noopener">Inquire About This Design ↗</a></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
